@@ -1,9 +1,104 @@
 <html>
-    <head>
-          <title>Home Page</title>
-    </head>
-  <body>
+  <head>
+    <title>Message Board</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+      }
 
-    <%- include("navBar",{links:links})%>
+      .container {
+        width: 60%;
+        margin: 50px auto;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        border-radius: 10px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #2c3e50;
+        font-size: 36px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .message {
+        border-bottom: 2px solid #e5e5e5;
+        padding: 20px 0;
+        margin-bottom: 20px;
+      }
+
+      .message:last-child {
+        border-bottom: none;
+      }
+
+      .message-text {
+        font-size: 22px;
+        color: #34495e;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .message-text::before {
+        content: "📌 ";
+        color: #e74c3c;
+      }
+
+      .message-user {
+        font-size: 16px;
+        color: #8e44ad;
+        font-weight: bold;
+      }
+
+      .message-date {
+        font-size: 14px;
+        color: #95a5a6;
+        font-style: italic;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        margin: 5px 0;
+      }
+
+      /* Highlight section for important info */
+      .highlight {
+        background-color: #f1c40f;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 16px;
+        color: #fff;
+        display: inline-block;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Message Board</h1>
+      <% messages.forEach(mess => { %>
+        <div class="message">
+          <ul>
+            <li class="message-text"><%= mess.text %></li>
+            <li class="message-user">Posted by: <%= mess.user %></li>
+            <li class="message-date">On: <%= mess.added.toLocaleDateString() %> at <%= mess.added.toLocaleTimeString() %></li>
+          </ul>
+          <!-- Add a highlight for important info -->
+          <div class="highlight">
+            Important Post
+          </div>
+        </div>
+      <% }) %>
+    </div>
   </body>
 </html>
