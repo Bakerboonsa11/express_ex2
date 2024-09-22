@@ -11,7 +11,7 @@ App.use("/new",message_route)
 
 App.set('views', path.join(__dirname, 'views'));
 
-// Set EJS as the view engi
+// Set EJS as the view eng
 App.set('view engine', 'ejs');
 
 const port=8000
