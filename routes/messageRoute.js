@@ -6,6 +6,7 @@ router.route("/")
   res.render("form")
 })
 .post((req,res)=>{
-    res.end("this is post route")
+  console.log(req.body)
+  res.end()
 })
 module.exports=router
