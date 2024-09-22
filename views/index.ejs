@@ -28,7 +28,7 @@
       }
 
       .message {
-        border-bottom: 2px solid #e5e5e5;
+        border: 2px solid #3a3939;
         padding: 20px 0;
         margin-bottom: 20px;
       }
@@ -69,23 +69,37 @@
       li {
         margin: 5px 0;
       }
-
+       .details{
+        width: 100px;
+        background-color: #8e44ad;
+        color: #fff;
+        font-weight: 900;
+        font-family: monospace;
+        border: none;
+        border-radius: 10px;
+       }
       /* Highlight section for important info */
       .highlight {
-        background-color: #f1c40f;
+        background-color: #cbc8bc;
         padding: 5px 10px;
         border-radius: 4px;
         font-size: 16px;
         color: #fff;
-        display: inline-block;
+        display:flex;
+        justify-content: space-between;
         margin-top: 10px;
         font-weight: bold;
+        color: black;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <h1>Message Board</h1>
+      <form action="/new" >
+      
+        <button type="submit">Post Message</button>
+      </form>
       <% messages.forEach(mess => { %>
         <div class="message">
           <ul>
@@ -95,7 +109,10 @@
           </ul>
           <!-- Add a highlight for important info -->
           <div class="highlight">
-            Important Post
+             <p>Important Post</p>
+
+            <button onclick="location.href='/new/<%= mess.id %>/details'" class="details">Details</button>
+
           </div>
         </div>
       <% }) %>

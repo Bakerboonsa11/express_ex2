@@ -1,21 +1,12 @@
-const express=require('express');
-const router=express.Router()
+const express = require('express');
+const router = express.Router();
+const messages= require('/home/bonsa/repos/express_ex2/messages.js')
 
-const messages = [
-  {
-    text: "Hi there!",
-    user: "Amando",
-    added: new Date()
-  },
-  {
-    text: "Hello World!",
-    user: "Charles",
-    added: new Date()
-  }
-];
 
-router.get("/",(req,res)=>{
-  res.render('index',{messages})
-})
+router.get("/", (req, res) => {
+  res.render('index', { messages });
+});
 
-module.exports=router
+// Exporting the router and messages as part of an object
+module.exports = router
+
