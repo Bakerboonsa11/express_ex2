@@ -1,0 +1,15 @@
+we have to valide the form data before we send it to the server. when we think about validation we have to do two very important thing
+the first one is the 
+1 validation this is like chaking weather the data in the feilds are fullfilled the requirements 
+2 sanitixation this is like cleaning the data or romeving the data those lead issue in the code 
+
+to do this we have to use the poackage called the express-valildator and rewuire it in the code 
+this package help as in to two thing
+
+the the express-validator works 
+
+first we have to do validation to do this we have to destrucre the body funcition and call it with the name of the feild asa
+an argument and chain every validation we want 
+
+what this did is it validate based on the spoecified validation and if there is any error is return that error the the req object
+
