@@ -13,3 +13,14 @@ an argument and chain every validation we want
 
 what this did is it validate based on the spoecified validation and if there is any error is return that error the the req object
 
+
+what is scaping means they are problems when there is free feilds that acept any form of data in this case the they me malicious 
+code like script code that can run in our web like script so to prevent this we have to use the scape method that is came with the expree-validator 
+
+that is used to convert the tag or charcter like the < $ & and other to onethr form like plalin text 
+so to prevent any this 
+
+after we setup the mongoose before trying to any cruid operation first we have to create schema that means defining the rules 
+for our data to be entered to databse 
+
+from that schema we have to create model that is used to commiunicate with data base 
