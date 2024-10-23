@@ -24,3 +24,7 @@ function theOlder(){
         console.log(i+1)
     }
 }
+
+if(Number!===null){
+    theOlder()
+}
