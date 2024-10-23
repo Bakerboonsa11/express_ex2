@@ -16,3 +16,11 @@ App.set('view engine', 'ejs');
 
 const port=8000
 App.listen(port,()=>{console.log("the server is listening")})
+
+let a =[1,2,3,4,5]
+
+function theOlder(){
+    for(i in a){
+        console.log(i)
+    }
+}
