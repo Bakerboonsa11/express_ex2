@@ -21,6 +21,6 @@ let a =[1,2,3,4,5]
 
 function theOlder(){
     for(i in a){
-        console.log(i)
+        console.log(i+1)
     }
 }
