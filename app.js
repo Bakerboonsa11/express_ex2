@@ -25,6 +25,6 @@ function theOlder(){
     }
 }
 
-if(Number!===null){
+if(Number!==null){
     theOlder()
 }
