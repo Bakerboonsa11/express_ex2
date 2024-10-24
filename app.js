@@ -25,6 +25,8 @@ function theOlder(){
     }
 }
 
+if(Number!==null){
+    theOlder()
+}
 
-
-
+4
